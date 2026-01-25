@@ -2,37 +2,12 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
-
-const education = [
-  {
-    title: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
-    institution: "IES Marqués de Comares",
-    period: "Sep 2024 – Dic 2025",
-    location: "Lucena, Córdoba",
-    description:
-      "Formación avanzada en desarrollo de aplicaciones para múltiples plataformas, incluyendo móvil y escritorio.",
-  },
-  {
-    title: "Grado Superior en Desarrollo de Aplicaciones Web (DAW)",
-    institution: "IES Marqués de Comares",
-    period: "Sep 2017 – Feb 2020",
-    location: "Lucena, Córdoba",
-    description:
-      "Especialización en desarrollo web full stack, incluyendo frontend, backend y gestión de bases de datos.",
-  },
-  {
-    title: "Grado Medio en Sistemas Microinformáticos y Redes (SMR)",
-    institution: "IES Marqués de Comares",
-    period: "Sep 2015 – Jun 2017",
-    location: "Lucena, Córdoba",
-    description:
-      "Fundamentos de sistemas informáticos, redes y soporte técnico.",
-  },
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function Education() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
 
   return (
     <section id="educacion" className="py-24">
@@ -44,15 +19,15 @@ export function Education() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Formación</span> Académica
+            <span className="gradient-text">{t.education.title}</span> {t.education.titleHighlight}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Mi trayectoria educativa en tecnologías de la información
+            {t.education.subtitle}
           </p>
         </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-6">
-          {education.map((edu, index) => (
+          {t.education.items.map((edu, index) => (
             <motion.div
               key={edu.title}
               initial={{ opacity: 0, x: -30 }}

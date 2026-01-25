@@ -1,18 +1,39 @@
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Languages } from "lucide-react";
 import { useState } from "react";
-
-const navItems = [
-  { name: "Inicio", href: "#inicio" },
-  { name: "Sobre mí", href: "#sobre-mi" },
-  { name: "Experiencia", href: "#experiencia" },
-  { name: "Proyectos", href: "#proyectos" },
-  { name: "Educación", href: "#educacion" },
-  { name: "Contacto", href: "#contacto" },
-];
+import { useLanguage } from "@/lib/i18n";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { name: t.header.nav.home, href: "#inicio" },
+    { name: t.header.nav.about, href: "#sobre-mi" },
+    { name: t.header.nav.experience, href: "#experiencia" },
+    { name: t.header.nav.projects, href: "#proyectos" },
+    { name: t.header.nav.education, href: "#educacion" },
+    { name: t.header.nav.contact, href: "#contacto" },
+  ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === "es" ? "en" : "es");
+  };
+
+  const handleDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    // Logic for language-based CV selection
+    const filename = language === "en" ? "CV_AlbertoZafraMontero_English.pdf" : "CV_AlbertoZafraMontero.pdf";
+    const url = `/${filename}`;
+
+    // Create a temporary link to trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <motion.header
@@ -32,27 +53,62 @@ export function Header() {
           </motion.a>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
-                >
-                  {item.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-6">
+            <ul className="flex items-center gap-8">
+              {navItems.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Language Switcher - Desktop */}
+            <motion.button
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-2 text-sm font-medium glass-card hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Change language"
+            >
+              <Languages size={16} />
+              <span className="uppercase">{language}</span>
+            </motion.button>
+
+            <motion.a
+              href="#contacto"
+              className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:opacity-90 transition-all shadow-lg shadow-primary/20"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t.header.nav.downloadCV}
+            </motion.a>
+          </div>
+
+          {/* Mobile Toggle & Language Switcher */}
+          <div className="md:hidden flex items-center gap-2">
+            <motion.button
+              onClick={toggleLanguage}
+              className="flex items-center gap-1 px-2 py-1 text-xs font-medium glass-card"
+              whileTap={{ scale: 0.95 }}
+              aria-label="Change language"
+            >
+              <Languages size={14} />
+              <span className="uppercase">{language}</span>
+            </motion.button>
+
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-foreground p-2"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
@@ -74,6 +130,15 @@ export function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#contacto"
+                onClick={() => setIsOpen(false)}
+                className="block font-medium text-primary"
+              >
+                {t.header.nav.downloadCV}
+              </a>
+            </li>
           </motion.ul>
         )}
       </nav>

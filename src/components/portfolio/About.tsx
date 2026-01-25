@@ -2,43 +2,46 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code2, Database, Server, Globe, Terminal, Wrench } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
-const skills = [
+const getSkills = (t: any) => [
   {
-    category: "Lenguajes",
+    category: t.about.skills.languages,
     icon: Code2,
     items: ["PHP", "JavaScript", "Java", "Python", "C#", "HTML", "CSS"],
   },
   {
-    category: "Frameworks",
+    category: t.about.skills.frameworks,
     icon: Terminal,
     items: ["Laravel", "Angular", ".NET Core", "React"],
   },
   {
-    category: "CMS & E-commerce",
+    category: t.about.skills.cmsEcommerce,
     icon: Globe,
     items: ["WordPress", "PrestaShop"],
   },
   {
-    category: "Bases de Datos",
+    category: t.about.skills.databases,
     icon: Database,
     items: ["MySQL", "PostgreSQL"],
   },
   {
-    category: "DevOps & Tools",
+    category: t.about.skills.devopsTools,
     icon: Server,
     items: ["Git", "Docker", "XAMPP", "Android Studio", "VS Code"],
   },
   {
-    category: "Sistemas",
+    category: t.about.skills.systems,
     icon: Wrench,
-    items: ["Windows Server 2022", "Gestión de Redes", "CI/CD"],
+    items: ["Windows Server 2022", t.language === "es" ? "Gestión de Redes" : "Network Management", "CI/CD"],
   },
 ];
 
 export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const { t } = useLanguage();
+  const skills = getSkills(t);
 
   return (
     <section id="sobre-mi" className="py-24 bg-muted/30">
@@ -50,12 +53,10 @@ export function About() {
           className="text-center mb-16"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            Sobre <span className="gradient-text">Mí</span>
+            {t.about.title} <span className="gradient-text">{t.about.titleHighlight}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Desarrollador FullStack con experiencia en múltiples tecnologías y
-            plataformas. Especializado en crear soluciones web escalables y
-            optimizadas.
+            {t.about.description}
           </p>
         </motion.div>
 

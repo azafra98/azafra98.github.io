@@ -1,73 +1,34 @@
-# Welcome to your Lovable project
+# Portfolio de Alberto Zafra Montero
 
-## Project info
+Portafolio profesional bilingüe (Español/Inglés) desarrollado con tecnologías web modernas para demostrar habilidades en desarrollo frontend y diseño UI/UX.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🔗 **Visita el sitio web:** [azafra98.github.io](https://azafra98.github.io)
 
-## How can I edit this code?
+## 🛠️ Tecnologías Utilizadas
 
-There are several ways of editing your application.
+Este proyecto ha sido construido utilizando las siguientes herramientas y librerías:
 
-**Use Lovable**
+*   **Core**: React 18, TypeScript, Vite
+*   **Estilos**: Tailwind CSS, PostCSS
+*   **UI Components**: shadcn/ui
+*   **Animaciones**: Framer Motion
+*   **Navegación**: React Router
+*   **Internacionalización**: Soporte bilingüe (Español/Inglés)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 Características Principales
 
-Changes made via Lovable will be committed automatically to this repo.
+*   **Diseño Responsivo**: Totalmente adaptado a dispositivos móviles, tablets y escritorio.
+*   **Modo Oscuro**: Implementación nativa de tema oscuro y claro.
+*   **Alto Rendimiento**: Optimización de carga de imágenes (WebP) y división de código (Code Splitting).
+*   **Accesibilidad**: Siguiendo estándares WCAG 2.1 AA.
+*   **SEO Amigable**: Estructura semántica y metaetiquetas optimizadas.
 
-**Use your preferred IDE**
+## 📫 Contacto
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+*   **GitHub**: [azafra98](https://github.com/azafra98)
+*   **LinkedIn**: [Alberto Zafra Montero](https://linkedin.com/in/alberto-zafra-montero)
+*   **Email**: azafram98@gmail.com
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+© 2026 Alberto Zafra Montero. Todos los derechos reservados.

@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="py-8 border-t border-border">
@@ -14,8 +16,18 @@ export function Footer() {
             viewport={{ once: true }}
             className="text-muted-foreground text-sm flex items-center gap-1"
           >
-            © {currentYear} Alberto Zafra Montero. Hecho con{" "}
-            <Heart size={14} className="text-primary" /> en España.
+            © {currentYear} Alberto Zafra Montero. {t.footer.madeWith}{" "}
+            React & Tailwind CSS.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-xs text-muted-foreground/60 max-w-md text-center md:text-left mt-2 md:mt-0"
+          >
+            {t.footer.legal}
           </motion.p>
 
           <motion.div
@@ -34,7 +46,7 @@ export function Footer() {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/azafram"
+              href="https://github.com/azafra98"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
