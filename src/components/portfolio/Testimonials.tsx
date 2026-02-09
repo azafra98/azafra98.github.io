@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Quote } from "lucide-react";
+import { Quote, Linkedin } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 export function Testimonials() {
@@ -64,9 +64,6 @@ export function Testimonials() {
                                             }}
                                         />
                                     </picture>
-                                    {/* Fallback avatar if image fails/hidden - handled via CSS or just another element hidden by default? 
-                      Simpler approach: Just use a generic avatar image as format source or handle onError to set src to a generic avatar.
-                   */}
                                     <div className="absolute inset-0 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-xl -z-10">
                                         {item.name.charAt(0)}
                                     </div>
@@ -76,9 +73,20 @@ export function Testimonials() {
                                     <h3 className="font-display text-lg font-semibold">
                                         {item.name}
                                     </h3>
-                                    <p className="text-sm text-muted-foreground">
+                                    <p className="text-sm text-muted-foreground mb-1">
                                         {item.role}
                                     </p>
+                                    {item.linkedin && (
+                                        <a
+                                            href={item.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-primary hover:text-primary/80 transition-colors inline-block"
+                                            aria-label={`LinkedIn ${item.name}`}
+                                        >
+                                            <Linkedin size={16} />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 

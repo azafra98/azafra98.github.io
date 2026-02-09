@@ -351,23 +351,24 @@ export const en: Translations = {
                 role: "Business Development Director at Agrocor",
                 image: "marta-dios",
                 imageFormat: "jpg",
-                content: [
-                    "Successfully resolves web incidents and errors.",
-                    "Contributes ideas that are positively valued in performance.",
-                    "Attentive to system and web failures.",
-                    "Proposes solutions, investigates, and constantly learns to adapt to the position.",
-                    "Proactive person, always proposing solutions to carry them out.",
-                    "Takes great care that everything goes well.",
-                    "Completed implementation on time and form.",
-                    "Excellent dedication to work and commitment to results."
-                ]
+                content: "With Alberto, we worked with complete confidence and the certainty of knowing that we were entrusting data and information to a person who treated them in a totally professional manner and who undoubtedly did an excellent job with us. Alberto is a very hard-working, very responsible person who cares about the work he is developing to always do it in the best way, giving his best every day. New challenges do not stop him; rather, they motivate him to move forward, facing them with a strength and character that make him a very valuable asset and a genuine professional.",
+                linkedin: "https://www.linkedin.com/in/marta-dios-c-b3a71928/"
             },
             {
                 name: "Pedro Santiago",
                 role: "Executive at Santiago Vargas",
                 image: "pedro-santiago",
                 imageFormat: "jpg",
-                content: "Recommendation letter pending receipt."
+                content: "Alberto is a talented professional who completed his internship as a web application and platform developer at José Santiago Vargas, S.A. for several months. I was able to verify his work directly and his exceptional performance, initiative, and potential to adapt any company to current technological demands. He demonstrated a solid understanding of key web development technologies, including HTML5, CSS3, JavaScript (ES6+), React, and Node.js, and actively participated in the implementation of the chemical product safety data program and its inclusion in the company's website. Likewise, he optimized the performance of the computer equipment.",
+                linkedin: "https://www.linkedin.com/in/pedro-santiago-mu%C3%B1oz-a974028b/"
+            },
+            {
+                name: "Jose Antonio Reyes",
+                role: "Owner of Joseabarber",
+                image: "josea-reyes",
+                imageFormat: "jpg",
+                content: "I want to thank my friend Zafra for the great job he has done with my website. From the beginning, he understood exactly what I wanted and captured it clearly, professionally, and with great care. The result is a modern, functional, and easy-to-use website, exactly what I needed. In addition, he added automatic WhatsApp reminders, the ability to view the nearest available appointments, and took charge of updating the entire system to run quickly and efficiently. The treatment has been close at all times, always willing to resolve doubts and propose improvements. I definitely recommend him completely.",
+                linkedin: "https://www.linkedin.com/in/josea-reyes-cabrera/"
             }
         ]
     },

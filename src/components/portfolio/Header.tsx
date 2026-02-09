@@ -42,11 +42,11 @@ export function Header() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30"
     >
-      <nav className="section-container py-4">
-        <div className="flex items-center justify-between">
+      <nav className="section-container py-2 md:py-4">
+        <div className="flex items-center justify-between flex-nowrap">
           <motion.a
             href="#inicio"
-            className="font-display text-xl font-bold gradient-text"
+            className="font-display text-xl font-bold gradient-text shrink-0"
             whileHover={{ scale: 1.05 }}
           >
             AZM
@@ -90,7 +90,7 @@ export function Header() {
           </div>
 
           {/* Mobile Toggle & Language Switcher */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-2 shrink-0">
             <motion.button
               onClick={toggleLanguage}
               className="flex items-center gap-1 px-2 py-1 text-xs font-medium glass-card"

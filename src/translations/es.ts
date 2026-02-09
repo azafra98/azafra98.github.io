@@ -353,23 +353,24 @@ export const es = {
         role: "Directora de desarrollo empresarial en Agrocor",
         image: "marta-dios",
         imageFormat: "jpg",
-        content: [
-          "Resuelve las incidencias y fallos de la web con éxito.",
-          "Aporta ideas que se valoran muy positivamente en el desempeño.",
-          "Atento a fallos del sistema y de la web.",
-          "Propone soluciones, investiga y aprende constantemente para adaptarse al puesto.",
-          "Es una persona proactiva, además de aportar ideas y sugerencias, siempre propone soluciones para llevarlas a cabo.",
-          "Se preocupa mucho porque todo vaya bien.",
-          "Ha finalizado la implantación en tiempo y forma.",
-          "Dedicación a su trabajo excelente y compromiso con el resultado."
-        ]
+        content: "Con Alberto trabajamos con total confianza y con la certeza de saber que estábamos confiando, datos e información a una persona que los trataba de forma totalmente profesional y que sin duda desarrolló un excelente trabajo con nosotros. Alberto es una persona muy trabajadora, muy responsable que se preocupa por el trabajo que está desarrollando para hacerlo siempre de la mejor forma dando lo mejor de sí en cada día. Los nuevos retos no le frenan, sino que los le motivan a seguir adelante, afrontarlos con una fuerza y un carácter que lo hacen un activo muy valioso y un profesional genuino.",
+        linkedin: "https://www.linkedin.com/in/marta-dios-c-b3a71928/"
       },
       {
         name: "Pedro Santiago",
         role: "Ejecutivo en Santiago Vargas",
         image: "pedro-santiago",
         imageFormat: "jpg",
-        content: "Carta de recomendación pendiente de recepción."
+        content: "Alberto, es un profesional talentoso que realizó sus prácticas como desarrollador de aplicaciones web y plataformas en José Santiago Vargas, s.a durante varios meses. Pude comprobar directamente su trabajo y excepcional desempeño, iniciativa y potencial para adaptar cualquier empresa a las exigencias técnologícas de la actualidad. Demostró una sólida comprensión de tecnologías clave para el desarrollo web, incluyendo HTML5, CSS3, JavaScript (ES6+), React y Node.js. y participó activamente en la implemetación del programa de datos de seguridad de productos químicos y su inclusión en la web de la empresa. Igualmente, optimizó el rendimiento de los equipos informáticos.",
+        linkedin: "https://www.linkedin.com/in/pedro-santiago-mu%C3%B1oz-a974028b/"
+      },
+      {
+        name: "Jose Antonio Reyes",
+        role: "Propietario de Joseabarber",
+        image: "josea-reyes",
+        imageFormat: "jpg",
+        content: "Quiero agradecer a mi amigo Zafra por el gran trabajo que ha hecho con mi página web. Desde el principio supo captar exactamente lo que quería y lo plasmó de forma clara, profesional y muy cuidada. El resultado es una web moderna, funcional y fácil de usar, justo lo que necesitaba. Además, añadió recordatorios automáticos por WhatsApp, la posibilidad de ver las citas más cercanas disponibles y se encargó de actualizar todo el sistema para que funcionara de forma rápida y eficiente. El trato ha sido cercano en todo momento, siempre dispuesto a resolver dudas y proponer mejoras. Sin duda, lo recomiendo totalmente.",
+        linkedin: "https://www.linkedin.com/in/josea-reyes-cabrera/"
       }
     ]
   },
