@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { Menu, X, Languages } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/lib/i18n";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
@@ -35,11 +36,33 @@ export function Header() {
     document.body.removeChild(link);
   };
 
+  // Auto-hide navbar on scroll
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 50) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
+      animate={{ y: isVisible ? 0 : -100, opacity: 1 }}
+      transition={{ duration: 0.3 }}
       className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30"
     >
       <nav className="section-container py-2 md:py-4">
