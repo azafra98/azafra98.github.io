@@ -7,6 +7,7 @@ export const es = {
       experience: "Experiencia",
       projects: "Proyectos",
       education: "Educación",
+      certificates: "Certificados",
       contact: "Contacto",
       downloadCV: "Descargar CV",
     },
@@ -14,11 +15,11 @@ export const es = {
 
   // Hero Section
   hero: {
-    badge: "Desarrollador Full Stack",
+    badge: "Desarrollador Full Stack & Sistemas IT",
     name: "Alberto Zafra",
     surname: "Montero",
     description:
-      "Desarrollador FullStack especializado en Prestashop, Laravel y WordPress. Experto en optimización de rendimiento, SEO y administración de sistemas.",
+      "Desarrollador Full Stack y Técnico de Sistemas con experiencia en ecosistemas web (Laravel, PrestaShop), administración de servidores y redes, y especialización en ciberseguridad y automatización de procesos (RPA).",
     ariaLabel: {
       linkedin: "LinkedIn",
       github: "GitHub",
@@ -27,16 +28,12 @@ export const es = {
     },
   },
 
-  // ... (leaving other sections unchanged via context matching or just targeting specific blocks if possible, but replace_file_content works on blocks)
-  // simpler to make multiple calls or one large block? I will do targeted edits for each section to be safe.
-
-
   // About Section
   about: {
     title: "Sobre",
     titleHighlight: "Mí",
     description:
-      "Desarrollador FullStack con experiencia en múltiples tecnologías y plataformas. Especializado en crear soluciones web escalables y optimizadas.",
+      "Desarrollador Full Stack y Técnico de Sistemas con mentalidad multidisciplinar. Combino la creación de aplicaciones web escalables y seguras (Laravel, PrestaShop) con la administración de servidores, redes y la automatización de procesos (RPA), aportando una visión integral tanto del software como de la infraestructura que lo sostiene.",
     skills: {
       languages: "Lenguajes",
       frameworks: "Frameworks",
@@ -55,7 +52,30 @@ export const es = {
     expandButton: "Ver más detalles",
     collapseButton: "Ver menos",
     technologies: "Tecnologías utilizadas",
+    otherExperienceTitle: "Otras Experiencias Laborales",
+    otherExperienceSubtitle:
+      "Trayectoria complementaria fuera del sector IT que refleja constancia, adaptabilidad y capacidad de trabajo en equipo",
+    showOtherExperience: "Mostrar otras experiencias",
+    hideOtherExperience: "Ocultar otras experiencias",
+    otherSkillsLabel: "Aptitudes y herramientas",
     positions: [
+      {
+        title: "Desarrollador Web Freelance",
+        company: "Joseabarber",
+        period: "Abr 2023 – Ene 2026",
+        location: "Lucena, Córdoba (Remoto)",
+        summary: [
+          "Desarrollo y mantenimiento en producción de una plataforma web de gestión de citas que optimiza la relación barbero-cliente",
+          "Liderazgo en la refactorización completa del sistema migrando el núcleo a Laravel 12",
+          "Optimización profunda de la base de datos y el código logrando una experiencia de usuario instantánea en móviles",
+        ],
+        details: [
+          "Implementación de recordatorios automáticos por WhatsApp 24 horas antes de cada cita",
+          "Sistema de prevención de borrado accidental para proteger la integridad de datos críticos",
+          "Arquitectura de seguridad robusta frente a vulnerabilidades web comunes",
+        ],
+        technologies: ["Laravel 12", "PHP", "MySQL", "JavaScript", "WhatsApp API", "Seguridad Web"],
+      },
       {
         title: "Desarrollador FullStack y Técnico de Sistemas",
         company: "Santiago Vargas",
@@ -170,6 +190,56 @@ export const es = {
           "Mantenimiento correctivo de hardware y digitalización de documentación administrativa",
         ],
         technologies: ["Windows Server 2012", "Clonezilla", "Sysprep", "Ubiquiti Unifi", "Hardware", "Visio", "Redes"],
+      },
+    ],
+    otherPositions: [
+      {
+        title: "Peón Agrícola",
+        company: "CIPRES",
+        period: "Sep 2026 – Oct 2026",
+        location: "Lucena, Córdoba",
+        summary: [
+          "Trabajo temporal en la campaña de recolección agrícola operando herramientas manuales y maquinaria de apoyo (paraguas de tractor)",
+          "Compaginado diariamente con formación técnica en ciberseguridad e idiomas durante las tardes",
+        ],
+        details: [],
+        technologies: ["Trabajo en equipo", "Maquinaria agrícola", "Constancia", "Gestión del tiempo"],
+      },
+      {
+        title: "Construcción y Mantenimiento",
+        company: "Ayuntamiento de Lucena",
+        period: "Abr 2025 – Oct 2025",
+        location: "Lucena, Córdoba",
+        summary: [
+          "Realización de tareas de mantenimiento municipal junto a los diferentes oficiales del Ayuntamiento de Lucena",
+          "Intervenciones polivalentes en áreas de albañilería, pintura y fontanería",
+        ],
+        details: [],
+        technologies: ["Peón de obra pública", "Albañilería", "Pintura", "Fontanería"],
+      },
+      {
+        title: "Peón Agrícola",
+        company: "Manuel Cuenca",
+        period: "Ene 2023 – Feb 2023",
+        location: "Lucena, Córdoba",
+        summary: [
+          "Recogida de aceitunas empleando herramientas adaptadas a cada situación del terreno",
+          "Uso de maquinaria especializada: máquina de varear y sopladora",
+        ],
+        details: [],
+        technologies: ["Desarrollo agrícola", "Máquina de varear", "Sopladora", "Trabajo en equipo"],
+      },
+      {
+        title: "Repartidor",
+        company: "Telepizza",
+        period: "Abr 2022 – Dic 2022",
+        location: "Lucena, Córdoba",
+        summary: [
+          "Reparto a domicilio con especialidad en el uso de motocicletas de 125 CC",
+          "Atención al cliente, manipulación de alimentos y reposición en tienda",
+        ],
+        details: [],
+        technologies: ["Atención al cliente", "Preparación de alimentos", "Motocicleta 125cc", "Reposición"],
       },
     ],
   },
@@ -294,6 +364,30 @@ export const es = {
     subtitle: "Mi trayectoria educativa en tecnologías de la información",
     items: [
       {
+        title: "Curso de Especialización en Ciberseguridad en Entornos TI (Máster FP - 720h)",
+        institution: "iLERNA",
+        period: "Sep 2026 – Actualidad",
+        location: "Online",
+        description:
+          "Máster de FP (720 horas) enfocado en el diseño, implementación y gestión de sistemas de ciberseguridad. Proporciona formación técnica para proteger infraestructuras digitales, auditar redes, garantizar el cumplimiento normativo y dar respuesta ante amenazas y ataques informáticos.",
+      },
+      {
+        title: "Curso Intensivo de Inglés - Nivel Intermedio (100h)",
+        institution: "Learning Corner",
+        period: "Jul 2026",
+        location: "Lucena, Córdoba",
+        description:
+          "Programa de inmersión lingüística de casi 100 horas lectivas en nivel intermedio, desarrollado de forma intensiva mediante clases diarias de más de 5 horas. Formación enfocada en la mejora práctica de las competencias comunicativas (fluidez conversacional, comprensión auditiva, lectura y gramática) para fortalecer el perfil profesional.",
+      },
+      {
+        title: "Automatización de Procesos - RPA (200h)",
+        institution: "Fundación Generation España",
+        period: "Abr 2026 – Jun 2026",
+        location: "Online",
+        description:
+          "Formación intensiva de 200 horas en Automatización Robótica de Procesos (RPA) y flujos de trabajo inteligentes (incluyendo n8n) para automatizar tareas repetitivas de gran volumen. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      },
+      {
         title: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
         institution: "IES Marqués de Comares",
         period: "Sep 2024 – Dic 2025",
@@ -327,8 +421,51 @@ export const es = {
     subtitle: "Reconocimientos oficiales a mi dedicación y aprendizaje",
     items: [
       {
+        title: "Proyecto Erasmus+ “I LOVE IT”",
+        issuer: "Society and Enterprise Development Institute",
+        year: "Ago 2026",
+        description:
+          "Intercambio formativo Erasmus+ en Lituania con 70 horas de formación en salud mental y educación no formal junto a más de 40 jóvenes de 6 países.",
+        details: [
+          "Facilitación de dinámicas grupales y talleres participativos en inglés.",
+          "Organización de la presentación intercultural de España.",
+          "Certificación Youthpass que valida adaptabilidad, empatía y trabajo en equipos multiculturales.",
+        ],
+        link: "https://www.youthpass.eu/en/verify/HBWP-N5P8-B9J6-QJJL/Alberto%20Zafra%20Montero",
+      },
+      {
+        title: "Introducción a la Ciberseguridad",
+        issuer: "Cisco",
+        year: "Abr 2026",
+        description:
+          "Certificado de curso completado y Microcredencial Universitaria de “Nivel Básico en Ciberseguridad”.",
+        details: [
+          "Comprensión de los principios fundamentales de ciberseguridad, impacto global de las ciberamenazas en la industria y detección/defensa frente a vulnerabilidades.",
+          "Criterio de emisión: Calificación aprobatoria en el examen final integral de Cisco Networking Academy.",
+          "Aptitudes validadas: Buenas prácticas en ciberseguridad (Cyber Best Practices), vulnerabilidades de red, privacidad y confidencialidad de datos, y detección de amenazas.",
+        ],
+        link: "https://www.credly.com/badges/7922c75b-e163-4e80-8a2c-a3ca0ccec844/linked_in_profile",
+      },
+      {
+        title: "Inteligencia Artificial y Marketing Digital (50h)",
+        issuer: "Andalucía Emplea +",
+        year: "Mar 2026",
+        description:
+          "Programa formativo oficial de 50 horas centrado en la aplicación práctica de herramientas de IA y analítica al marketing digital.\nID de la credencial: QWMOXqZT34K2qQPZ6JUJLGRaE2krsa",
+        details: [
+          "Módulo 1: Fundamentos de la Inteligencia Artificial y su aplicación al Marketing.",
+          "Módulo 2: Herramientas de Inteligencia Artificial para Marketing.",
+          "Módulo 3: Datos, segmentación y personalización con IA.",
+          "Módulo 4: IA Generativa y estrategia de contenidos.",
+          "Módulo 5: Analítica predictiva y toma de decisiones.",
+          "Módulo 6: Tendencias, ética y regulación de la IA.",
+          "Módulo 7: Proyecto final y aplicación práctica.",
+        ],
+        link: "https://ws050.juntadeandalucia.es/verificarFirma/",
+      },
+      {
         title: "Proyecto Erasmus+ “Water It’s Me”",
-        issuer: "Erasmus+ / Comisión Europea",
+        issuer: "ADRA International",
         year: "Abr 2023",
         description: "Intercambio cultural en Wroclaw (Polonia) con participantes de Rumanía, Lituania, Polonia y España.",
         details: [

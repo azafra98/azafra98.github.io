@@ -14,6 +14,7 @@ export function Header() {
     { name: t.header.nav.experience, href: "#experiencia" },
     { name: t.header.nav.projects, href: "#proyectos" },
     { name: t.header.nav.education, href: "#educacion" },
+    { name: t.header.nav.certificates, href: "#certificados" },
     { name: t.header.nav.contact, href: "#contacto" },
   ];
 
@@ -77,7 +78,7 @@ export function Header() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-5 lg:gap-7">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <a

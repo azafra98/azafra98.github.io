@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { Code2, Database, Server, Globe, Terminal, Wrench } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
-const getSkills = (t: any) => [
+const getSkills = (t: any, language: string) => [
   {
     category: t.about.skills.languages,
     icon: Code2,
@@ -28,20 +28,25 @@ const getSkills = (t: any) => [
   {
     category: t.about.skills.devopsTools,
     icon: Server,
-    items: ["Git", "Docker", "XAMPP", "Android Studio", "VS Code"],
+    items: ["Git", "Docker", "n8n (RPA)", "XAMPP", "Android Studio", "VS Code"],
   },
   {
     category: t.about.skills.systems,
     icon: Wrench,
-    items: ["Windows Server 2022", t.language === "es" ? "Gestión de Redes" : "Network Management", "CI/CD"],
+    items: [
+      "Windows Server 2022",
+      language === "es" ? "Gestión de Redes" : "Network Management",
+      language === "es" ? "Ciberseguridad" : "Cybersecurity",
+      "CI/CD",
+    ],
   },
 ];
 
 export function About() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { t } = useLanguage();
-  const skills = getSkills(t);
+  const { t, language } = useLanguage();
+  const skills = getSkills(t, language);
 
   return (
     <section id="sobre-mi" className="py-24 bg-muted/30">

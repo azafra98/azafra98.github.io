@@ -9,6 +9,7 @@ export const en: Translations = {
             experience: "Experience",
             projects: "Projects",
             education: "Education",
+            certificates: "Certificates",
             contact: "Contact",
             downloadCV: "Download CV",
         },
@@ -16,11 +17,11 @@ export const en: Translations = {
 
     // Hero Section
     hero: {
-        badge: "Full Stack Developer",
+        badge: "Full Stack Developer & IT Systems Specialist",
         name: "Alberto Zafra",
         surname: "Montero",
         description:
-            "Full Stack Developer specialized in Prestashop, Laravel, and WordPress. Expert in performance optimization, SEO, and system administration.",
+            "Full Stack Developer and Systems Technician with experience in web ecosystems (Laravel, PrestaShop), server and network administration, and specialization in cybersecurity and process automation (RPA).",
         ariaLabel: {
             linkedin: "LinkedIn",
             github: "GitHub",
@@ -34,7 +35,7 @@ export const en: Translations = {
         title: "About",
         titleHighlight: "Me",
         description:
-            "Full Stack Developer with experience in multiple technologies and platforms. Specialized in creating scalable and optimized web solutions.",
+            "Full Stack Developer and Systems Technician with a multidisciplinary mindset. I combine the creation of scalable and secure web applications (Laravel, PrestaShop) with server and network administration and process automation (RPA), providing an end-to-end perspective on both software and the underlying infrastructure.",
         skills: {
             languages: "Languages",
             frameworks: "Frameworks",
@@ -53,7 +54,30 @@ export const en: Translations = {
         expandButton: "Show more details",
         collapseButton: "Show less",
         technologies: "Technologies used",
+        otherExperienceTitle: "Other Work Experience",
+        otherExperienceSubtitle:
+            "Complementary non-IT work history reflecting consistency, adaptability, and teamwork",
+        showOtherExperience: "Show other experience",
+        hideOtherExperience: "Hide other experience",
+        otherSkillsLabel: "Skills & tools",
         positions: [
+            {
+                title: "Freelance Web Developer",
+                company: "Joseabarber",
+                period: "Apr 2023 – Jan 2026",
+                location: "Lucena, Córdoba (Remote)",
+                summary: [
+                    "Developed and currently maintain a production appointment management web platform optimizing barber-client interactions",
+                    "Led a complete system refactoring, migrating the core architecture to Laravel 12",
+                    "Deep database and code optimization resulting in an instantaneous mobile user experience",
+                ],
+                details: [
+                    "Implemented automated WhatsApp appointment reminders 24 hours in advance",
+                    "Accidental deletion prevention safeguards to protect critical schedule data",
+                    "Robust security architecture hardened against common web vulnerabilities",
+                ],
+                technologies: ["Laravel 12", "PHP", "MySQL", "JavaScript", "WhatsApp API", "Web Security"],
+            },
             {
                 title: "Full Stack Developer and Systems Technician",
                 company: "Santiago Vargas",
@@ -168,6 +192,56 @@ export const en: Translations = {
                     "Corrective hardware maintenance and administrative documentation digitization",
                 ],
                 technologies: ["Windows Server 2012", "Clonezilla", "Sysprep", "Ubiquiti Unifi", "Hardware", "Visio", "Networking"],
+            },
+        ],
+        otherPositions: [
+            {
+                title: "Agricultural Worker",
+                company: "CIPRES",
+                period: "Sep 2026 – Oct 2026",
+                location: "Lucena, Córdoba",
+                summary: [
+                    "Seasonal work in the agricultural harvest campaign operating hand tools and support machinery (tractor shaker umbrella)",
+                    "Combined daily with technical training in cybersecurity and languages during the afternoons",
+                ],
+                details: [],
+                technologies: ["Teamwork", "Agricultural Machinery", "Consistency", "Time Management"],
+            },
+            {
+                title: "Construction & Maintenance",
+                company: "Ayuntamiento de Lucena",
+                period: "Apr 2025 – Oct 2025",
+                location: "Lucena, Córdoba",
+                summary: [
+                    "Municipal maintenance tasks working alongside skilled tradespeople at Lucena City Council",
+                    "Multi-skilled interventions across masonry, painting, and plumbing areas",
+                ],
+                details: [],
+                technologies: ["Public Works", "Masonry", "Painting", "Plumbing"],
+            },
+            {
+                title: "Agricultural Worker",
+                company: "Manuel Cuenca",
+                period: "Jan 2023 – Feb 2023",
+                location: "Lucena, Córdoba",
+                summary: [
+                    "Olive harvesting using tools adapted to each terrain condition",
+                    "Operation of specialized machinery: olive shaker and blower",
+                ],
+                details: [],
+                technologies: ["Agricultural Work", "Harvesting Machinery", "Blower", "Teamwork"],
+            },
+            {
+                title: "Delivery Driver",
+                company: "Telepizza",
+                period: "Apr 2022 – Dec 2022",
+                location: "Lucena, Córdoba",
+                summary: [
+                    "Home delivery specializing in 125cc motorcycle operation",
+                    "Customer service, food handling, and in-store restocking",
+                ],
+                details: [],
+                technologies: ["Customer Service", "Food Preparation", "125cc Motorcycle", "Restocking"],
             },
         ],
     },
@@ -292,6 +366,30 @@ export const en: Translations = {
         subtitle: "My educational journey in information technology",
         items: [
             {
+                title: "Cybersecurity Specialization Course in IT Environments (Vocational Master - 720h)",
+                institution: "iLERNA",
+                period: "Sep 2026 – Present",
+                location: "Online",
+                description:
+                    "Vocational Master's program (720 hours) focused on designing, implementing, and managing cybersecurity systems. Provides technical training to protect digital infrastructures, audit networks, ensure regulatory compliance, and respond to cyber threats and attacks.",
+            },
+            {
+                title: "Intensive English Course - Intermediate Level (100h)",
+                institution: "Learning Corner",
+                period: "Jul 2026",
+                location: "Lucena, Córdoba",
+                description:
+                    "Language immersion program of nearly 100 teaching hours at an intermediate level, delivered intensively through daily classes of over 5 hours. Training focused on practically improving communication skills (conversational fluency, listening comprehension, reading, and grammar) to strengthen professional proficiency.",
+            },
+            {
+                title: "Robotic Process Automation - RPA (200h)",
+                institution: "Fundación Generation España",
+                period: "Apr 2026 – Jun 2026",
+                location: "Online",
+                description:
+                    "Intensive 200-hour training in Robotic Process Automation (RPA) and intelligent workflows (including n8n) to automate high-volume repetitive tasks. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            },
+            {
                 title: "Higher Degree in Multiplatform Application Development (DAM)",
                 institution: "IES Marqués de Comares",
                 period: "Sep 2024 – Dec 2025",
@@ -325,8 +423,51 @@ export const en: Translations = {
         subtitle: "Official recognition of my dedication and learning",
         items: [
             {
+                title: "Erasmus+ Project “I LOVE IT”",
+                issuer: "Society and Enterprise Development Institute",
+                year: "Aug 2026",
+                description:
+                    "Erasmus+ training exchange in Lithuania featuring 70 hours of training in mental health and non-formal education alongside 40+ young participants from 6 countries.",
+                details: [
+                    "Facilitation of group dynamics and participatory workshops in English.",
+                    "Organization of Spain's intercultural presentation.",
+                    "Youthpass certification validating adaptability, empathy, and multicultural teamwork.",
+                ],
+                link: "https://www.youthpass.eu/en/verify/HBWP-N5P8-B9J6-QJJL/Alberto%20Zafra%20Montero",
+            },
+            {
+                title: "Introduction to Cybersecurity",
+                issuer: "Cisco",
+                year: "Apr 2026",
+                description:
+                    "Course completion certificate and University Micro-credential in “Basic Level in Cybersecurity”.",
+                details: [
+                    "Foundational understanding of cybersecurity, global impact of cyber threats across industries, and vulnerability/threat detection and defense.",
+                    "Earning Criteria: Passing score on Cisco Networking Academy comprehensive final exam.",
+                    "Validated skills: Cyber Best Practices, Cybersecurity, Network Vulnerabilities, Privacy and Data Confidentiality, Threat Detection.",
+                ],
+                link: "https://www.credly.com/badges/7922c75b-e163-4e80-8a2c-a3ca0ccec844/linked_in_profile",
+            },
+            {
+                title: "Artificial Intelligence and Digital Marketing (50h)",
+                issuer: "Andalucía Emplea +",
+                year: "Mar 2026",
+                description:
+                    "Official 50-hour training program focused on practically applying AI tools and analytics to digital marketing.\nCredential ID: QWMOXqZT34K2qQPZ6JUJLGRaE2krsa",
+                details: [
+                    "Module 1: Fundamentals of Artificial Intelligence and its application to Marketing.",
+                    "Module 2: Artificial Intelligence tools for Marketing.",
+                    "Module 3: Data, segmentation, and personalization with AI.",
+                    "Module 4: Generative AI and content strategy.",
+                    "Module 5: Predictive analytics and decision-making.",
+                    "Module 6: AI trends, ethics, and regulation.",
+                    "Module 7: Final project and practical application.",
+                ],
+                link: "https://ws050.juntadeandalucia.es/verificarFirma/",
+            },
+            {
                 title: "Erasmus+ Project “Water It’s Me”",
-                issuer: "Erasmus+ / European Commission",
+                issuer: "ADRA International",
                 year: "Apr 2023",
                 description: "Cultural exchange in Wroclaw (Poland) with participants from Romania, Lithuania, Poland, and Spain.",
                 details: [

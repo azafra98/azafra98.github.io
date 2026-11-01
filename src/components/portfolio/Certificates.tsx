@@ -58,7 +58,7 @@ export function Certificates() {
                                 <div className="text-sm text-muted-foreground mb-4">
                                     <span className="font-medium text-foreground">{cert.issuer}</span> • {cert.year}
                                 </div>
-                                <p className="text-muted-foreground mb-6 leading-relaxed">
+                                <p className="text-muted-foreground mb-6 leading-relaxed whitespace-pre-line">
                                     {cert.description}
                                 </p>
 
